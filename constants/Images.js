@@ -1,0 +1,1 @@
+export const learnColor = require('../assets/images/travel_options/home.svg');
