@@ -7,7 +7,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 import AppNavigator from "./navigation/AppNavigator";
 
-export default function App(props) {
+export default function App(props: any) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
 
   if (!isLoadingComplete && !props.skipLoadingScreen) {
@@ -44,13 +44,13 @@ async function loadResourcesAsync() {
   ]);
 }
 
-function handleLoadingError(error) {
+function handleLoadingError(error: any) {
   // In this case, you might want to report the error to your error reporting
   // service, for example Sentry
   console.warn(error);
 }
 
-function handleFinishLoading(setLoadingComplete) {
+function handleFinishLoading(setLoadingComplete: any) {
   setLoadingComplete(true);
 }
 

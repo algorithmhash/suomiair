@@ -1,4 +1,4 @@
-import { createBrowserApp } from '@react-navigation/web';
+import { createBrowserApp } from '@types/react-navigation';
 import { createSwitchNavigator } from 'react-navigation';
 
 import MainTabNavigator from './MainTabNavigator';

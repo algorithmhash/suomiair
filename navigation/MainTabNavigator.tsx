@@ -11,12 +11,12 @@ import LinksScreen from "../screens/LinksScreen";
 import SettingsScreen from "../screens/SettingsScreen";
 import Icon from "../constants/HomeIcon";
 
-const config = Platform.select({
+const config: any = Platform.select({
   web: { headerMode: "screen" },
   default: {}
 });
 
-const HomeStack = createStackNavigator(
+const HomeStack: any = createStackNavigator(
   {
     Home: HomeScreen
   },
@@ -25,13 +25,13 @@ const HomeStack = createStackNavigator(
 
 HomeStack.navigationOptions = {
   tabBarLabel: " ",
-  tabBarIcon: ({ tintColor }) => <Icon name="home" />
+  tabBarIcon: ( tintColor: any ) => <Icon className={tintColor} name="home" />
   
 };
 
 HomeStack.path = "";
 
-const LinksStack = createStackNavigator(
+const LinksStack: any = createStackNavigator(
   {
     Links: LinksScreen
   },
@@ -41,14 +41,14 @@ const LinksStack = createStackNavigator(
 LinksStack.navigationOptions = {
   tabBarLabel: " ",
 
-  tabBarIcon: ({ tintColor }) => <Icon name="home" color={tintColor} />,
+  tabBarIcon: ( tintColor: any ) => <Icon name="home" color={tintColor} />,
 
   showIcon: true
 };
 
 LinksStack.path = "";
 
-const SettingsStack = createStackNavigator(
+const SettingsStack: any = createStackNavigator(
   {
     Settings: SettingsScreen
   },
@@ -57,7 +57,7 @@ const SettingsStack = createStackNavigator(
 
 SettingsStack.navigationOptions = {
   tabBarLabel: "Settings",
-  tabBarIcon: ({ focused }) => (
+  tabBarIcon: ( focused: any ) => (
     <TabBarIcon
       focused={focused}
       name={Platform.OS === "ios" ? "ios-options" : "md-options"}
@@ -67,7 +67,7 @@ SettingsStack.navigationOptions = {
 
 SettingsStack.path = "";
 
-const tabNavigator = createBottomTabNavigator({
+const tabNavigator: any = createBottomTabNavigator({
   HomeStack,
   LinksStack,
   SettingsStack

@@ -9,7 +9,6 @@ import {
   View
 } from "react-native";
 
-import { MonoText } from "../components/StyledText";
 import Points from "./group/Points";
 import Cash from "./group/Cash";
 
